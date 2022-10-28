@@ -1,0 +1,107 @@
+DML:
+
+Insert:Is used to insert the data into the table.
+Update:Is used to modify and update the table.
+Delete:delete date from the table.
+Select:Select or fetch the data from the table.
+
+Syntax for update
+
+UPDATE for update
+
+UPDATE table_name SET column_name = 'value' WHERE codition;
+
+
+
+create database bigbazar;
+use bigbazar ; 
+
+create table bigbazar_table(Sno varchar(50),Item varchar(50), Item_weight int(10),year bigint, Item_rate int(10), rate_level varchar(50));
+select * from bigbazar_table;
+
+insert into bigbazar_table values(1, 'potato', 4 , 2022 , 500 , 'high'); 
+
+  
+delete from bigbazar_table where Sno = 3;
+select * from bigbazar_table;
+
+
+
+
+
+-------------------------------------------------------------------
+
+AND Operator:
+cond1  cond2  result
+true   false  false
+false  true   false
+false  false  true 
+true   true   true
+
+OR Operator:
+cond1  cond2  result
+true   false  true
+false  true   true
+false  false  false
+true   true   true
+
+IN 
+NOt IN
+Between
+ORDER BY
+
+Aggregate Functions:are used to perform the calculation on a column data.
+1) COUNT: count will return the number of rows in a table or column.
+2)Sum: It will add all the data in the column.
+3)Max: It will return maximum value from the column.
+4)Min: It will return minimum value from the column.
+5)Avg: It will return avg value from column.
+
+
+LIKE: Is used for pattern Matching.
+
+a(any alphabet)%:It can match any string of any length starts with
+
+%a(any alphabet):It can match any string of any length ends with
+
+Instr:
+ex: INSTR('XWORKZODC', 'k')--->5
+
+SUBSTR:
+Ex:SUBSTR('BANGALORE',4)
+
+Constraints: are used to limit the data when inserting th data into the table.
+Constraints are specified to the column while creating the table.
+1) table level 
+  $1)Not null :this will not accept the null values.
+
+  $2)unique key: this constraint  will not accept  any duplicate value and it can accept null value.
+
+  $3) check constraint: used to limit the value range.
+
+ Distinct keyword: It is used to avoid the dublicate values.
+
+4)primary key:uniquly identify each row in a database table.
+
+5)foreign key: this key refers to the primary key of one table to the primary key of another table.
+               It always refers to the parent table.
+               foreign key values can be duplicated.
+
+               primary key  will always presents parent table.
+               foreign key will always presents in the child table.
+               primary key values and foreign key values should be same.  
+
+LTRIM: remove the left spaces
+RTRIM: remove the right space.
+
+
+  
+
+
+ 
+
+
+
+
+
+
