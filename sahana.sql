@@ -262,6 +262,97 @@ insert into Buyer values(10,10,'shree', 'H',24,'india');
 
 select * from Buyer;
 
+--------------------------------------------------------------------------------------
+
+
+CREATE TABLE hotel_name(hotel_id int  , hotelNo bigint, hotelName varchar(10), hotelAddress varchar(15), hotelCity varchar(20), roomNo int, roomType varchar(18), roomPrice double,  checkoutTime time, created_by varchar(20),primary key(hotel_id));
+
+SELECT * FROM hotel_name;
+
+INSERT INTO hotel_name VALUES(1, 963258452, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(2, 975225321, 'Anu hotel', 'Rajjainagar', 'Banlore', 166, 'Single room', 3000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(3, 895225358, 'Suka Sagar', 'kalyanagar', 'Bagalkot', 256, 'Double room', 6000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(4, 635221258, 'Shabari', 'Shivajicircle', 'Mudhol', 123, 'Ac room', 8000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(5, 785225625, 'A1 hotel', 'Bagawanpeth', 'Guledgudd', 235, 'NonAc room', 9000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(6, 963258452, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(7, 963258451, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(8, 963258452, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(9, 963258453, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(10, 963258454, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+INSERT INTO hotel_name VALUES(11, 963258455, 'Kamathotel', 'Rajkumarnagara', 'BangloreRajajinagar', 166, 'Singleanddoubles', 5000.00, current_time(), now());
+
+SELECT * FROM hotel_name;
+
+select LTRIM(hotel_id) from hotel_name;
+select LTRIM(hotelNo) from hotel_name;
+select LTRIM(hotelName) from hotel_name;
+select LTRIM(hotelAddress) from hotel_name;
+select LTRIM(hotelCity) from hotel_name;
+select LTRIM(roomNo) from hotel_name;
+select LTRIM(roomType) from hotel_name;
+select LTRIM(roomPrice) from hotel_name;
+select LTRIM(checkoutTime) from hotel_name;
+select LTRIM(created_by) from hotel_name;
+
+select RTRIM(hotel_id) from hotel_name;
+select RTRIM(hotelNo) from hotel_name;
+select RTRIM(hotelName) from hotel_name;
+select RTRIM(hotelAddress) from hotel_name;
+select RTRIM(hotelCity) from hotel_name;
+select RTRIM(roomNo) from hotel_name;
+select RTRIM(roomType) from hotel_name;
+select RTRIM(roomPrice) from hotel_name;
+select RTRIM(checkoutTime) from hotel_name;
+select RTRIM(created_by) from hotel_name;
+
+
+---------------------------
+
+
+SELECT * FROM chat_detail;
+
+CREATE TABLE chat_detail(hotel_id int , Chats varchar(30), ChatPrice bigint, Sweets varchar(50), SweetPrice bigint, Starters varchar(50), StarterPrice bigint, GstNo varchar(40), PhoneNo bigint, Address varchar(30), foreign key(hotel_id) references hotel_name(hotel_id));
+
+INSERT INTO chat_detail VALUES(1, 'Pani Puri', 20, 'Jalebi', 10, 'Aloo Bonda', 50, 'AETF213555455', 963258412, 'Rajajinagar');
+INSERT INTO chat_detail VALUES(2, 'Masala Puri', 25, 'Sweet samosa', 30, 'Chinees samosa', 60, 'SEWHE4454545', 854126842, 'Gayatrinagar');
+INSERT INTO chat_detail VALUES(3, 'Sev Puri', 25, 'Rabdi jalebi', 40, 'Khasta kachori', 30, 'WEW4554155', 6321475452, 'Navrang');
+INSERT INTO chat_detail VALUES(4, 'Aloo Puri', 30, 'Gajar halwa', 35, 'Vegetable cutlet', 40, 'SDSJD5454555', 874255412, 'Kalyanagar');
+INSERT INTO chat_detail VALUES(5, 'Dahi Puri', 25, 'Rasmalai', 25, 'Vada pav', 45, 'SDS4555455', 7542982554, 'Lalbhag');
+INSERT INTO chat_detail VALUES(6, 'Bhel Puri', 25, 'Rasgulla', 25, 'Pav bhaji', 50, 'QWFFF55455', 636268415, 'Shivajinagar');
+INSERT INTO chat_detail VALUES(7, 'Jhal muri', 30, 'Jamoon', 15, 'French fries', 60, 'SSDFDG45451', 896325417, 'Katriguppe');
+INSERT INTO chat_detail VALUES(8, 'Tikki chaat', 35, 'Kulfie', 30, 'Paneer cutlet', 50, 'ADFDFGD55455', 652147896, 'Kengeri');
+INSERT INTO chat_detail VALUES(9, 'Kachori', 30, 'Boondi', 25, 'Russian cutlet', 40, 'FGFGD554451', 6556895656, 'Whitefield');
+INSERT INTO chat_detail VALUES(10, 'Samosa', 20, 'Imarti', 20, 'Sandwich', 30, 'SDFER54452', 896325412, 'Srirampura');
+INSERT INTO chat_detail VALUES(11, 'Dahi vada', 30, 'Kheer', 20, 'Gobi', 40, 'EERETRT4545', 741258963, 'Ghandhi nagar');
+
+
+select LTRIM(hotel_id) fROM chat_detail;
+select LTRIM(Chats) fROM chat_detail;
+select LTRIM(ChatPrice) fROM chat_detail;
+select LTRIM(Sweets) fROM chat_detail;
+select LTRIM(SweetPrice) fROM chat_detail;
+select LTRIM(Starters) fROM chat_detail;
+select LTRIM(StarterPrice) fROM chat_detail;
+select LTRIM(GstNo) fROM chat_detail;
+select LTRIM(GstNo) fROM chat_detail;
+select LTRIM(Address) fROM chat_detail;
+
+select RTRIM(hotel_id) fROM chat_detail;
+select RTRIM(Chats) fROM chat_detail;
+select RTRIM(ChatPrice) fROM chat_detail;
+select RTRIM(Sweets) fROM chat_detail;
+select RTRIM(SweetPrice) fROM chat_detail;
+select RTRIM(Starters) fROM chat_detail;
+select RTRIM(StarterPrice) fROM chat_detail;
+select RTRIM(GstNo) fROM chat_detail;
+select RTRIM(GstNo) fROM chat_detail;
+select RTRIM(Address) fROM chat_detail;
+
+
+SELECT * FROM chat_detail;
+
+
+
 
 
 
