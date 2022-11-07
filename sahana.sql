@@ -351,8 +351,42 @@ select RTRIM(Address) fROM chat_detail;
 
 SELECT * FROM chat_detail;
 
+SELECT * FROM chat_detail group by GstNo;
 
+------------------------------------------------------------------------------------------------
+create table fooddetails(id int not null,resturant varchar(40),food_item varchar(40),Quantity int,price int, check(price>= 45 AND price<=200)); 
 
+INSERT INTO fooddetails values(1,'shubhamtindi','biriyani',3,150),(2,'anu','veg fried rice',4,160),(3,'muskan','eggrice',3,180),(4,'sagar','palav',4,200),(5,'dhanu','vegBiriyani',4,100),(6,'kan','rice',3,50);
+
+lock;
+
+LOCK TABLE fooddetails read;
+
+UPDATE fooddetails SET price =150 where id = 1;
+
+UNLOCK tables;
+UPDATE fooddetails SET price =150 where id = 1;
+
+SELECT * FROM fooddetails limit 2;
+
+select * from fooddetails order by id desc limit 2;
+
+select * from fooddetails order by food_item desc limit 2;
+
+GREATEEST:
+
+35,56,66,44,55,32,23,65
+
+SELECT greatest(35,56,66,44,55,32,23,65);
+
+/*DATEDIFF:DATE DIFFERENCE*/
+
+SELECT datediff('2022-11-01','2022-10-10');
+
+/*dayname:*/
+SELECT dayname('2022-10-9');
+
+SELECT dayofyear('2022-10-9');
 
 
 

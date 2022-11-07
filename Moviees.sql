@@ -118,10 +118,6 @@ select substr(hero, 1,5) from movie_table;
 select substr(director,2,7) from movie_table;
 
 
-create table orders(Sno int, movie_name varchar(30), ticket_price int, location varchar(50), hero varchar(50), budget bigint);
-
-
-
 
 
 

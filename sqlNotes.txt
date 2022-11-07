@@ -1,6 +1,19 @@
+DDL:state and structure of the database.
+     1)CREATE   2) ALTER  3)DROP    4)TRUNCATE
+
+ALTER TABLE tb_name ADD COLUMN col_name dt;
+ALTER TABLE tb_name RENAME COLUMN col to new;
+ALTER TABLE tb_name DROP COLUMN col_name;
+ALTER TABLE tb_name MODIFY COLUMN COL_NAME datatype;
+
+
+--------------------------------------------------------------------------------------
 DML:
 
 Insert:Is used to insert the data into the table.
+INSERT INTO tb_NAME VALUES(dt1, dt2);
+INSERT INTO tb_name(col_name, col_name) values(DT1, DT2);
+
 Update:Is used to modify and update the table.
 Delete:delete date from the table.
 Select:Select or fetch the data from the table.
@@ -11,6 +24,9 @@ UPDATE for update
 
 UPDATE table_name SET column_name = 'value' WHERE codition;
 
+DESC table: column names and datatype of a perrticular table.
+
+INSTR: find the position of the character.
 
 
 create database bigbazar;
@@ -50,6 +66,7 @@ NOt IN
 Between
 ORDER BY
 
+-----------------------------------------------------------------------------------
 Aggregate Functions:are used to perform the calculation on a column data.
 1) COUNT: count will return the number of rows in a table or column.
 2)Sum: It will add all the data in the column.
@@ -57,7 +74,7 @@ Aggregate Functions:are used to perform the calculation on a column data.
 4)Min: It will return minimum value from the column.
 5)Avg: It will return avg value from column.
 
-
+-----------------------------------------------------------------------------------------
 LIKE: Is used for pattern Matching.
 
 a(any alphabet)%:It can match any string of any length starts with
@@ -69,7 +86,7 @@ ex: INSTR('XWORKZODC', 'k')--->5
 
 SUBSTR:
 Ex:SUBSTR('BANGALORE',4)
-
+-----------------------------------------------------------------------------------------
 Constraints: are used to limit the data when inserting th data into the table.
 Constraints are specified to the column while creating the table.
 1) table level 
@@ -90,11 +107,40 @@ Constraints are specified to the column while creating the table.
                primary key  will always presents parent table.
                foreign key will always presents in the child table.
                primary key values and foreign key values should be same.  
-
-LTRIM: remove the left spaces
+---------------------------------------------------------------------------------
+LTRIM: remove the leading spaces.
 RTRIM: remove the right space.
 
+----------------------------------------------------------------------------------
+GROUP BY: similar values in the single value.
+  Syntax:
+      SELECT * FROM table_name group by column_name;
+      SELECT column_name, SUM(column_name) from table_name group by column_name;
+----------------------------------------------------------------------------------
+lpad:it adds string to the existing one.
+left padding
 
+  Original string
+  length string
+  String to be added
+
+----------------------------------------------------------------------------------
+
+JOINS:  Based on condition the column value joins from more than one  tables.
+
+        1) Inner Join: combines the column value from the both table and it will return the
+                       similar/common values.
+
+              /* syntax for inner join
+                   select table1_name.column_name,table2_name.column_name,
+                   from table1 inner joiun table2 on
+                   tablename1.columnname = tablename1.columnname */
+
+
+        2) 
+                       
+  
+  
   
 
 
